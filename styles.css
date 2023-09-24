@@ -1,24 +1,19 @@
+.content {
+  max-width: 720px;
+  min-width: 500px;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
 body{
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: teal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    overflow: hidden;
 }
-a:hover{
-    margin: 1px;
+
+a{
+    color: black;
+    text-decoration: none;
 }
-a .a {
-    display: none;
-  }
-  
-  a:hover .d {
-    display: none;
-  }
-  
-  a:hover .a {
-    display: inline;
-  }
-  
-  .button:hover {
-    margin: 0px;
-  }

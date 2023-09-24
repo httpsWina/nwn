@@ -5,85 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/98.css">
     <script data-goatcounter="https://nwn.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.gif">
-    <title>nwn.gay</title>
+    async src="//gc.zgo.at/count.js"></script>
+    <script type="text/javascript">
+        // <![CDATA[
+        var speed=100; // speed of wobbling, lower is faster
+        var height=3; // height of wobbling in pixels
+        var alink="http://www.mf2fm.com/rv"; // page to link text to (set to ="" for no link)
+        
+        /****************************
+        *    Wobbly Text Effect     *
+        *(c) 2003-6 mf2fm web-design*
+        *  http://www.mf2fm.com/rv  *
+        * DON'T EDIT BELOW THIS BOX *
+        ****************************/
+        var wobtxt, wobble, wobcnt=0;
+        window.onload=function() { if (document.getElementById) {
+          var i, wobli;
+          wobble=document.getElementById("wobble");
+          wobtxt=wobble.firstChild.nodeValue;
+          while (wobble.childNodes.length) wobble.removeChild(wobble.childNodes[0]);
+          for (i=0; i<wobtxt.length; i++) {
+            wobli=document.createElement("span");
+            wobli.setAttribute("id", "wobb"+i);
+            wobli.style.position="relative";
+            wobli.appendChild(document.createTextNode(wobtxt.charAt(i)));
+            if (alink) {
+              wobli.style.cursor="pointer";
+              wobli.onclick=function() { top.location.href=alink; }
+            }
+            wobble.appendChild(wobli);
+          }
+          setInterval("wobbler()", speed);
+        }}
+        
+        function wobbler() {
+          for (var i=0; i<wobtxt.length; i++) document.getElementById("wobb"+i).style.top=Math.round(height*Math.sin(i+wobcnt))+"px"
+          wobcnt++;
+        }
+        // ]]>
+        </script>
+<link rel="icon" type="image/x-icon" href="/img/favicon.gif">
+    <title>web</title>
 </head>
 <body>
-    <div class="window" style="width: 50%;">
-        <div class="title-bar">
-          <div class="title-bar-text">status update</div>
+    <div class="content">
+        <span style="color: blue; text-decoration: underline;">link uno</span>
+         <div id="wobble" style="float: left;font-size: 25px; font-weight: bold;">discord:@apapacho</div>
+        <div class="image"><img src="img/placeholder/bc.gif" width="250px" height="200px" style="float: left;">
+            <br><span style="color: blue; text-decoration: underline; float: center;">link dos</span>
+        </div><br> <br>
+        <img src="img/placeholder/g.gif" style="height: 300px; width: 250px; float: right;">
+        <a href="https://www.op.gg/summoners/las/tag"><strong>op.gg</strong></a><br>
+        <a href="https://twitter.com/httpsWina"><strong>TWitter</strong></a>
+        <div class="links">
+            <ul>
+            <li><a style="font-size: 40px;" href="https://www.backloggd.com/u/wina/"><strong>backloggd</strong></a></li>
+            <li><a href="https://steamcommunity.com/id/httpswina/"><strong>STEAM</strong></a></li>
+            <li> <a href="https://www.last.fm/user/Wina-"><strong>last.fm</strong></a></li>
+            </ul>
         </div>
-        <div class="window-body" style="display: flex;">
-            <div class="left">
-                <img src="img/hero.jpg" style="width: 200px; height: 200px;">
-                <p style="text-align: center; font-weight: bold;">any/all - argentinian</p>
-            </div>
-            
-            <div style="margin: 10px">
-                <span>i haven't found the time or inspiration for building the site, but in the meanwhile i need something to dump my links on, so:</span>
-      <li style="list-style-type:none" class="tree-view">
-        <details open>
-          <summary>links</summary>
-          <ul class="tree-view">
-            <li><a href="https://twitter.com/httpsWina" target="_blank">twitter</a></li>
-            <li><a href="https://steamcommunity.com/id/httpswina/" target="_blank">steam</a></li>
-            <li><a class="discord"><span class="d">discord</span><span class="a">wina#9431</span></a></li>
-            <li><a href="https://www.backloggd.com/u/wina/" target="_blank">backloggd</a></li>
-            <li><a href="https://www.last.fm/user/Wina-" target="_blank">last.fm</a></li>
-            <li>
-              <details>
-                <summary>other games</summary>
-                <ul>
-                  <li><a href="https://store.epicgames.com/en-US/u/3814e1249d16487b9d9dd4137b49bfdf" target="_blank">epic</a></li>
-                  <li><a href="https://ch.tetr.io/u/wina" target="_blank">tetr.io</a></li>
-                  <li><a href="https://www.op.gg/summoners/las/tag" target="_blank">league</a></li>
-                  <li><a href="https://www.roblox.com/users/2034036817/profile" target="_blank">roblox</a></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-                <details>
-                  <summary>other social media</summary>
-                  <ul>
-                    <li><a href="https://reddit.com/user/RealWina" target="_blank">reddit</a></li>
-                    <li><a href="https://github.com/RealWina" target="_blank">github</a></li>
-                    <li><a href="https://www.twitch.tv/wina" target="_blank">twitch</a></li>
-                    <li><a href="https://www.youtube.com/c/winah" target="_blank">youtube</a></li>
-                    <li><a href="https://discord.gg/uax5az5hvY" target="_blank">.gg/wina</a></li>
-                  </ul>
-                </details>
-              </li>
-            
-          </ul>
-        </details>
-      </li>
-        </div>
-        <div class="buttons">
-          <a href="https://tetr.io" target="_blank" class="button"><img src="img/button-pc.gif"></a><br>            
-            <a href="https://www.mozilla.org/en-US/firefox/new/" class="button" target="_blank"><img src="img/button-firefox.gif"></a><br>
-            <img src="img/button-gba.gif"><br>
-            <a href="https://www.irfanview.com" class="button" target="_blank"><img src="img/button-irfan.gif"></a><br>
-            <a href="https://archive.org" class="button" target="_blank"><img src="img/button-ia.gif"></a><br>
-            <img src="img/button-poke.gif"><br>
-            <a href="https://ublockorigin.com" class="button" target="_blank"><img src="img/button-ublock.png"></a><br>
-        </div>
-            </div>
-        <div class="status-bar">
-          <p class="status-bar-field">built using 98.css</p>
-          <p class="status-bar-field">goat counter disabled<!--goat count: <div id="stats"></div>--></p>
-          <!-- <script>
-            var r = new XMLHttpRequest();
-            r.addEventListener('load', function() {
-                document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
-            })
-            r.open('GET', 'https://nwn.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
-            r.send()
-        </script>-->
-          <p class="status-bar-field">last update: 8/5/2023</p>
-        </div>
-      </div>
-</body>
+           
+       
+        <span style="font-size: 15px;">analytics by goatcounter</span>
+    </div>
+    </body>
 </html>
